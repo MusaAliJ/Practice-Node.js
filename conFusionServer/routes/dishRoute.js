@@ -202,7 +202,7 @@ dishRouter.route('/:dishId/comments/:commentId')
             }, (err) => next(err));
         }
         else if (dish == null) {
-            err = new Error('Dish ' + req.params.dishId + ' not found');
+            err = new Error('Sorry Dish ' + req.params.dishId + ' not found');
             err.status = 404;
             return next(err);
         }
