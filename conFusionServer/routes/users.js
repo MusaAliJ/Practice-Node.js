@@ -9,7 +9,7 @@ var authenticate = require('../authenticate');
 
 router.use(bodyParser.json());
 
-/* GET users listing. */
+
 router.get('/', authenticate.verifyUser, authenticate.verifyAdmin, (req,res,next) => {
   User.find({})
   .then((users) => {
